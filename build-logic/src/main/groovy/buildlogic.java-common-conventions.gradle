@@ -7,6 +7,8 @@
 plugins {
     // Apply the java Plugin to add support for Java.
     id 'java'
+    // Apply JaCoCo plugin for test coverage
+    id 'jacoco'
 }
 
 repositories {
@@ -46,4 +48,34 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
+}
+
+// Configure JaCoCo
+jacoco {
+    toolVersion = '0.8.12'
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
+        html.required = true
+    }
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = 0.70
+            }
+        }
+    }
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
+
+check {
+    dependsOn jacocoTestCoverageVerification
 }
