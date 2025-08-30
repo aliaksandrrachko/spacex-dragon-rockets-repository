@@ -59,6 +59,7 @@ Double Landing – Ended – Dragons: 0
 - **Solo Development**: This project is developed by a single developer without branching strategies
 - **AI Assistance**: Amazon Q (AWS AI assistant) Claude 3.5 Sonnet is used to help with code implementation, design decisions, and best practices
 - **Commit Strategy**: Direct commits to main branch with clear, incremental progress following TDD principles
+- **Simple Identifiers**: To keep the solution simple, models use string names as identifiers instead of UUIDs (rockets and missions are identified by their names as shown in the requirements)
 
 ---
 
