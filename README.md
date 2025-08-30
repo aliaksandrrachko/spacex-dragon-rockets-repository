@@ -55,6 +55,11 @@ Double Landing – Ended – Dragons: 0
 - **Testing**: TDD approach with comprehensive unit tests
 - **Code Standards**: Google Java Style Guide
 
+## Development Assumptions
+- **Solo Development**: This project is developed by a single developer without branching strategies
+- **AI Assistance**: Amazon Q (AWS AI assistant) Claude 3.5 Sonnet is used to help with code implementation, design decisions, and best practices
+- **Commit Strategy**: Direct commits to main branch with clear, incremental progress following TDD principles
+
 ---
 
 SIX Coding Exercise
