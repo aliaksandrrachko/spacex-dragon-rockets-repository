@@ -5,11 +5,10 @@ import lombok.NonNull;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 
 @Data
 public class Mission {
     private final @NonNull String name;
     private @NonNull MissionStatus status;
-    private final Set<UUID> assignedRocketIds = new HashSet<>();
+    private final Set<String> assignedRocketNames = new HashSet<>();
 }
