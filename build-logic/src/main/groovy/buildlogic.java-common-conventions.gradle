@@ -26,6 +26,9 @@ dependencies {
     
     testCompileOnly 'org.projectlombok:lombok:1.18.34'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
+    
+    // AssertJ for fluent assertions
+    testImplementation 'org.assertj:assertj-core:3.26.3'
 }
 
 testing {

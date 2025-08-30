@@ -14,7 +14,8 @@ public class RocketRepositoryInMemoryImpl implements RocketRepository {
   @Override
   public Rocket add(String name) {
     Rocket rocket = new Rocket(name, RocketStatus.ON_GROUND);
-    return rockets.putIfAbsent(name, rocket);
+    Rocket existing = rockets.putIfAbsent(name, rocket);
+    return existing == null ? rocket : existing;
   }
 
   @Override
