@@ -8,7 +8,7 @@ import io.github.aliaksandrrachko.spacex.dragon.rockets.repository.core.api.exce
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-class RocketRepositoryInMemoryImpl implements RocketRepository {
+public class RocketRepositoryInMemoryImpl implements RocketRepository {
   private final Map<String, Rocket> rockets = new ConcurrentHashMap<>();
 
   @Override
