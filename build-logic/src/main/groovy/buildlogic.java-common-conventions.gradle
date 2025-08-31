@@ -11,6 +11,9 @@ plugins {
     id 'jacoco'
 }
 
+// Project versioning
+group = 'io.github.aliaksandrrachko.spacex.dragon.rockets.repository'
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
