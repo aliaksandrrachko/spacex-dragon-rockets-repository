@@ -25,7 +25,7 @@
 
   <module name="SuppressWarningsFilter"/>
 
-  <!-- Custom regex checks from project standards -->
+  <!-- Custom regex checks for code quality -->
   <module name="RegexpMultiline">
     <property name="message" value="Blank line at start of enum should be removed"/>
     <property name="format" value="enum.*\s*\{\s*\n\s*\n"/>
@@ -295,7 +295,7 @@
       <property name="tokens" value="SINGLE_LINE_COMMENT, BLOCK_COMMENT_BEGIN"/>
     </module>
 
-    <!-- Indentation - Set to 4 spaces per project standards -->
+    <!-- Indentation - Set to 4 spaces for consistency -->
     <module name="Indentation">
       <property name="basicOffset" value="4"/>
       <property name="braceAdjustment" value="4"/>
