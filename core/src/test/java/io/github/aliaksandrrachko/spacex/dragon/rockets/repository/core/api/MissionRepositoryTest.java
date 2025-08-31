@@ -117,4 +117,22 @@ class MissionRepositoryTest {
     assertThat(summary.get(1).getName()).isEqualTo("Luna1");   // 2 rockets
     assertThat(summary.get(2).getName()).isEqualTo("Mars");    // 0 rockets
   }
+
+  @Test
+  void getSummary_ShouldSortByNameWhenRocketCountIsEqual() {
+    // given
+    repository.add("Alpha");
+    repository.add("Beta");
+    
+    repository.assignRocket("Alpha", "Dragon 1");
+    repository.assignRocket("Beta", "Dragon 2");
+    
+    // when
+    List<Mission> summary = repository.getSummary();
+    
+    // then
+    assertThat(summary).hasSize(2);
+    assertThat(summary.get(0).getName()).isEqualTo("Beta");  // Same rocket count, but "Beta" > "Alpha" (descending)
+    assertThat(summary.get(1).getName()).isEqualTo("Alpha");
+  }
 }
