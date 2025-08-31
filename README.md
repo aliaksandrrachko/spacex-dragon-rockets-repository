@@ -57,7 +57,7 @@ Double Landing – Ended – Dragons: 0
 
 ## Development Assumptions
 - **Solo Development**: This project is developed by a single developer without branching strategies
-- **AI Assistance**: Amazon Q (AWS AI assistant) Claude 3.5 Sonnet is used to help with code implementation, design decisions, and best practices
+- **AI Assistance**: Amazon Q (AWS AI assistant) Claude 3.5 Sonnet via CLI is used to help with code implementation, design decisions, and best practices
 - **Commit Strategy**: Direct commits to main branch with clear, incremental progress following TDD principles
 - **Simple Identifiers**: To keep the solution simple, models use string names as identifiers instead of UUIDs (rockets and missions are identified by their names as shown in the requirements)
 - **Repository Pattern Only**: This implementation focuses solely on the repository pattern for data access. Cross-repository business rules (like "mission becomes Pending when any rocket is In repair") would be handled by a service layer in a complete application, not by the repositories themselves
