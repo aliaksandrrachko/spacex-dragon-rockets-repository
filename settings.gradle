@@ -14,6 +14,16 @@ pluginManagement {
 plugins {
     // Apply the foojay-resolver plugin to allow automatic download of JDKs
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+    // Apply build scan plugin for CI performance insights
+    id 'com.gradle.enterprise' version '3.16.2'
+}
+
+gradleEnterprise {
+    buildScan {
+        termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+        termsOfServiceAgree = 'yes'
+        publishOnFailure()
+    }
 }
 
 rootProject.name = 'spacex-dragon-rockets-repository'
