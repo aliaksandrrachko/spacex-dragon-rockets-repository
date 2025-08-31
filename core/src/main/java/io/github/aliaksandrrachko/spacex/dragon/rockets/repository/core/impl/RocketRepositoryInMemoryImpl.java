@@ -7,6 +7,7 @@ import io.github.aliaksandrrachko.spacex.dragon.rockets.repository.core.api.exce
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Consumer;
 
 public class RocketRepositoryInMemoryImpl implements RocketRepository {
   private final Map<String, Rocket> rockets = new ConcurrentHashMap<>();
@@ -20,21 +21,20 @@ public class RocketRepositoryInMemoryImpl implements RocketRepository {
 
   @Override
   public Rocket assignToMission(String name, String missionName) {
-    Rocket rocket = rockets.computeIfPresent(name, (key, existing) -> {
+    return updateRocket(name, existing -> {
       existing.setAssignedMissionName(missionName);
       existing.setStatus(RocketStatus.IN_SPACE);
-      return existing;
     });
-    if (rocket == null) {
-      throw new RocketNotFoundException(name);
-    }
-    return rocket;
   }
 
   @Override
   public Rocket changeStatus(String name, RocketStatus status) {
+    return updateRocket(name, existing -> existing.setStatus(status));
+  }
+
+  private Rocket updateRocket(String name, Consumer<Rocket> updater) {
     Rocket rocket = rockets.computeIfPresent(name, (key, existing) -> {
-      existing.setStatus(status);
+      updater.accept(existing);
       return existing;
     });
     if (rocket == null) {
