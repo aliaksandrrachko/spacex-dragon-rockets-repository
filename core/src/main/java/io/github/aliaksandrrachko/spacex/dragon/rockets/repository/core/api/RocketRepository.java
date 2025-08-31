@@ -4,7 +4,9 @@ import io.github.aliaksandrrachko.spacex.dragon.rockets.repository.core.api.mode
 import io.github.aliaksandrrachko.spacex.dragon.rockets.repository.core.api.model.rocket.RocketStatus;
 
 public interface RocketRepository {
-  Rocket add(String name);
-  Rocket assignToMission(String name, String missionName);
-  Rocket changeStatus(String name, RocketStatus status);
+    Rocket add(String name);
+
+    Rocket assignToMission(String name, String missionName);
+
+    Rocket changeStatus(String name, RocketStatus status);
 }

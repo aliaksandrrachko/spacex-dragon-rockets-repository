@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+
+<suppressions>
+    <!-- Suppress production method limits for test files -->
+    <suppress id="MethodLengthProd" files=".*[/\\]src[/\\]test[/\\].*"/>
+    <suppress id="MethodCountProd" files=".*[/\\]src[/\\]test[/\\].*"/>
+    
+    <!-- Suppress test method limits for production files -->
+    <suppress id="MethodLengthTest" files=".*[/\\]src[/\\]main[/\\].*"/>
+    <suppress id="MethodCountTest" files=".*[/\\]src[/\\]main[/\\].*"/>
+</suppressions>

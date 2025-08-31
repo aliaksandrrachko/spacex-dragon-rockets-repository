@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class RocketRepositoryFactory {
-  public static RocketRepository createInMemory() {
-    return new RocketRepositoryInMemoryImpl();
-  }
+    public static RocketRepository createInMemory() {
+        return new RocketRepositoryInMemoryImpl();
+    }
 }

@@ -53,7 +53,19 @@ Double Landing – Ended – Dragons: 0
 - **Storage**: In-memory collections
 - **Architecture**: Repository pattern
 - **Testing**: TDD approach with comprehensive unit tests
-- **Code Standards**: Google Java Style Guide
+- **Code Standards**: Google Java Style Guide with Checkstyle enforcement
+
+## Code Quality
+- **Checkstyle**: Enforces Google Java Style Guide with customizations
+  - Line length: 140 characters
+  - Indentation: 4 spaces
+  - Method length: 30 lines (60 for tests)
+  - Method count: 30 max (60 for tests)
+  - Parameter count: 7 max
+  - File length: 900 lines
+  - Configuration: `config/checkstyle/checkstyle.xml`
+- **JaCoCo**: Test coverage reporting with 100% minimum threshold
+- **Quality Gates**: Zero tolerance for checkstyle violations and coverage below 100%
 
 ## Development Assumptions
 - **Solo Development**: This project is developed by a single developer without branching strategies

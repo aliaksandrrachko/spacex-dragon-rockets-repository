@@ -5,7 +5,7 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public class MissionRepositoryFactory {
-  public static MissionRepository createInMemory() {
-    return new MissionRepositoryInMemoryImpl();
-  }
+    public static MissionRepository createInMemory() {
+        return new MissionRepositoryInMemoryImpl();
+    }
 }

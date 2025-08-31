@@ -6,10 +6,10 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum RocketStatus {
-  ON_GROUND("On ground"),
-  IN_SPACE("In space"),
-  IN_REPAIR("In repair"),
-  IN_BUILD("In build");
-  
-  private final String displayName;
+    ON_GROUND("On ground"),
+    IN_SPACE("In space"),
+    IN_REPAIR("In repair"),
+    IN_BUILD("In build");
+
+    private final String displayName;
 }

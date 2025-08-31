@@ -6,10 +6,10 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public enum MissionStatus {
-  SCHEDULED("Scheduled"),
-  PENDING("Pending"),
-  IN_PROGRESS("In Progress"),
-  ENDED("Ended");
-  
-  private final String displayName;
+    SCHEDULED("Scheduled"),
+    PENDING("Pending"),
+    IN_PROGRESS("In Progress"),
+    ENDED("Ended");
+
+    private final String displayName;
 }
