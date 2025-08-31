@@ -1,4 +1,4 @@
-name: Build
+name: CI Build
 
 on:
   push:
@@ -9,14 +9,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java-version: [17, 21]
     
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up JDK 21
+    - name: Set up JDK ${{ matrix.java-version }}
       uses: actions/setup-java@v4
       with:
-        java-version: '21'
+        java-version: ${{ matrix.java-version }}
         distribution: 'temurin'
     
     - name: Setup Gradle
@@ -29,14 +32,14 @@ jobs:
       uses: dorny/test-reporter@v1
       if: success() || failure()
       with:
-        name: Test Results
+        name: Test Results (Java ${{ matrix.java-version }})
         path: '**/build/test-results/test/TEST-*.xml'
         reporter: java-junit
     
     - name: Add coverage to PR
       id: jacoco
       uses: madrapps/jacoco-report@v1.6.1
-      if: github.event_name == 'pull_request'
+      if: github.event_name == 'pull_request' && matrix.java-version == 21
       with:
         paths: |
           ${{ github.workspace }}/core/build/reports/jacoco/test/jacocoTestReport.xml
@@ -48,7 +51,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: test-results
+        name: test-results-java-${{ matrix.java-version }}
         path: |
           **/build/reports/tests/
           **/build/reports/checkstyle/

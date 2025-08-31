@@ -1,6 +1,6 @@
 # SpaceX Dragon Rockets Repository
 
-[![Build](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository/actions/workflows/build.yml/badge.svg)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository/actions/workflows/build.yml)
+[![Build](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository/actions/workflows/ci-build.yml/badge.svg)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository/actions/workflows/ci-build.yml)
 [![Quality Gate Status](https://img.shields.io/badge/quality%20gate-passing-brightgreen)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository)
 
