@@ -3,6 +3,7 @@
 [![Build](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository/actions/workflows/ci-build.yml/badge.svg)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository/actions/workflows/ci-build.yml)
 [![Java](https://img.shields.io/badge/Java-21-blue)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository)
 [![Gradle](https://img.shields.io/badge/Gradle-9.0.0-blue)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository)
+[![Build Scan](https://img.shields.io/badge/Build%20Scan-enabled-brightgreen)](https://gradle.com)
 [![Quality Gate Status](https://img.shields.io/badge/quality%20gate-passing-brightgreen)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/aliaksandrrachko/spacex-dragon-rockets-repository)
 
