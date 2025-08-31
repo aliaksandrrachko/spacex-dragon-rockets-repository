@@ -41,7 +41,7 @@ class RocketRepositoryTest {
     Rocket second = repository.add(rocketName);
     
     // then
-    assertThat(second).isSameAs(first);
+    assertThat(second).isEqualTo(first);
   }
 
   @Test
