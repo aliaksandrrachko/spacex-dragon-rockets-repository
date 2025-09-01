@@ -80,6 +80,7 @@ Double Landing – Ended – Dragons: 0
 - **Commit Strategy**: Direct commits to main branch with clear, incremental progress following TDD principles
 - **Simple Identifiers**: To keep the solution simple, models use string names as identifiers instead of UUIDs (rockets and missions are identified by their names as shown in the requirements)
 - **Repository Pattern Only**: This implementation focuses solely on the repository pattern for data access. Cross-repository business rules (like "mission becomes Pending when any rocket is In repair") would be handled by a service layer in a complete application, not by the repositories themselves
+- **No Logging Required**: This library performs simple in-memory operations with comprehensive test coverage, eliminating the need for logging frameworks like SLF4J. Any debugging information is provided through the test suite
 - **No Publishing Required**: This library is not intended for publication to any package repository (Maven Central, etc.), focusing purely on implementation quality and functionality
 
 ---
